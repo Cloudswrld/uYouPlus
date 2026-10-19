@@ -59,6 +59,11 @@ jobs:
         with:
           path: main
           submodules: recursive
+      - name: Update Return YouTube Dislikes
+        run: |
+          cd main/Tweaks/Return-YouTube-Dislikes
+          git fetch origin main
+          git checkout origin/main
 
       - name: Caching brew dependencies
         id: brew_cache
